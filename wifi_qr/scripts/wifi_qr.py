@@ -23,11 +23,8 @@ def gen_wifi_qr(ssid, password, path):
     Creating a QR code based on an SSID and credentials of a wifi network.
     """
 
-    # Creates a .png containg the wifi network's credentials, by default it is saved to ~/Downloads.\n
     # Refer to https://github.com/zxing/zxing/wiki/Barcode-Contents#wi-fi-network-config-android-ios-11.\n
     # Layout of the string (as of 2022-03-08) is WIFI:T:WPA;S:mynetwork;P:mypass;;
-
-    click.echo(str(path))
 
     if path != _default_save_path:
         if path == ".":
